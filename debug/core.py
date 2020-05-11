@@ -27,6 +27,10 @@ def ERR(fmt, *args):
     __debug_print__("ERR", fmt, *args)
 
 
+def WRN(fmt, *args):
+    __debug_print__("WRN", fmt, *args)
+
+
 def DIE(fmt, *args):
     __debug_print__("DIE", fmt, *args)
     for line in traceback.format_stack():
