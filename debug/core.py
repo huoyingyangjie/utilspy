@@ -2,9 +2,11 @@
 import datetime
 import traceback
 
+DBGCTL_VAR_NAME = "__yangjiegogogo_debug__"
+
 
 def DBGCTL(bool_val):
-    globals()['__yangjiegogogo_debug__'] = bool_val
+    globals()[DBGCTL_VAR_NAME] = bool_val
 
 
 def __debug_print__(debug_type, fmt, *args):
@@ -13,7 +15,7 @@ def __debug_print__(debug_type, fmt, *args):
 
 
 def DBG(fmt, *args):
-    if  globals()['__yangjiegogogo_debug__']:
+    if DBGCTL_VAR_NAME not in globals() or globals()[DBGCTL_VAR_NAME]:
         __debug_print__("DBG", fmt, *args)
 
 
