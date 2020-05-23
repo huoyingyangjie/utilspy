@@ -1,4 +1,4 @@
 # @Author: yangjiegogogo@gmail.com
-from core import INI
-import core
+from .core import INI
+
 __all__ = ['INI']
