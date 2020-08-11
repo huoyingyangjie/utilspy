@@ -45,7 +45,7 @@ class INI(object):
                 self.local_sections.append(section)
                 continue
             if line[0] == '=':
-                raise Exception("illegal illegal beginning of line")
+                raise Exception("illegal beginning of line")
             if '=' not in line:
                 raise Exception("no split character")
             if section is None:
