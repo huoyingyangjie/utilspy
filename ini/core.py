@@ -25,6 +25,8 @@ class INI(object):
             i = i.strip()
             if i == "":
                 continue
+            if len(i) > 0 and i[0] == '#':
+                continue
             text_lines_strip.append(i)
         section = None
         for line in text_lines_strip:
